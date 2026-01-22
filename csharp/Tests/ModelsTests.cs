@@ -7,13 +7,13 @@ public class ModelsTests
     {
         var volume = new ConsumptionVolume(
             Consumer: "C1",
-            PeriodStart: new DateTime(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc),
+            PeriodStart: new DateTimeOffset(2022, 1, 1, 0, 0, 0, TimeSpan.Zero),
             Duration: Duration.Hour,
             QuantityKwh: 4671.549m
         );
 
         Assert.Equal("C1", volume.Consumer);
-        Assert.Equal(new DateTime(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc), volume.PeriodStart);
+        Assert.Equal(new DateTimeOffset(2022, 1, 1, 0, 0, 0, TimeSpan.Zero), volume.PeriodStart);
         Assert.Equal(Duration.Hour, volume.Duration);
         Assert.Equal(4671.549m, volume.QuantityKwh);
     }

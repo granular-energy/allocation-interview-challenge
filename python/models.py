@@ -23,11 +23,3 @@ class ConsumptionVolume:
     period_start: datetime
     duration: Duration
     quantity_kwh: Decimal
-
-@dataclass
-class AllocationCsvRow:
-    producer: str
-    consumer: str
-    period_start: datetime
-    duration: Duration
-    quantity_kwh: Decimal

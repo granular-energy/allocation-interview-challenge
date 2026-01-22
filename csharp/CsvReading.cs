@@ -40,28 +40,22 @@ public static class CsvReading
         return volumes;
     }
 
-    public static List<AllocationCsvRow> LoadAllocations(string filePath)
+    public static void LoadAllocations(string filePath)
     {
-        var allocations = new List<AllocationCsvRow>();
-
         foreach (var record in ReadCsvRecords(filePath))
         {
-            var allocation = new AllocationCsvRow(
-                Producer: record["producer"],
-                Consumer: record["consumer"],
-                PeriodStart: ParseTimestamp(record["timestamp"]),
-                Duration: Duration.Hour,
-                QuantityKwh: decimal.Parse(record["quantity"], CultureInfo.InvariantCulture)
-            );
-            allocations.Add(allocation);
+            var producer = record["producer"];
+            var consumer = record["consumer"];
+            var periodStart = ParseTimestamp(record["timestamp"]);
+            var quantityKwh = decimal.Parse(record["quantity"], CultureInfo.InvariantCulture);
         }
 
-        return allocations;
+        //TODO: return allocations
     }
 
-    private static DateTime ParseTimestamp(string timestamp)
+    private static DateTimeOffset ParseTimestamp(string timestamp)
     {
-        return DateTime.Parse(timestamp, CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal);
+        return DateTimeOffset.Parse(timestamp);
     }
 
     private static IEnumerable<Dictionary<string, string>> ReadCsvRecords(string filePath)

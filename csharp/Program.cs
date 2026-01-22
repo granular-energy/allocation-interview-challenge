@@ -23,5 +23,5 @@ if (consumptionVolumes.Count > 0)
     Console.WriteLine($"\nSample consumption record: {consumptionVolumes[0]}");
 if (productionVolumes.Count > 0)
     Console.WriteLine($"Sample production record: {productionVolumes[0]}");
-if (allocations.Count > 0)
-    Console.WriteLine($"Sample allocation record: {allocations[0]}");
+// if (allocations.Count > 0)
+//     Console.WriteLine($"Sample allocation record: {allocations[0]}");

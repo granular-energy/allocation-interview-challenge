@@ -10,22 +10,14 @@ public enum Duration
 
 public record ProductionVolume(
     string Producer,
-    DateTime PeriodStart,
+    DateTimeOffset PeriodStart,
     Duration Duration,
     decimal QuantityKwh
 );
 
 public record ConsumptionVolume(
     string Consumer,
-    DateTime PeriodStart,
-    Duration Duration,
-    decimal QuantityKwh
-);
-
-public record AllocationCsvRow(
-    string Producer,
-    string Consumer,
-    DateTime PeriodStart,
+    DateTimeOffset PeriodStart,
     Duration Duration,
     decimal QuantityKwh
 );

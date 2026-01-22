@@ -40,17 +40,17 @@ def load_production(file_path: Path) -> list[ProductionVolume]:
     return production_volumes
 
 
-def load_allocations(file_path: Path) -> list[AllocationCsvRow]:
-    allocations = []
+def load_allocations(file_path: Path) -> None:
+    
     with open(file_path, newline='', encoding='utf-8-sig') as f:
         reader = csv.DictReader(f)
-        for row in reader:
-            allocation = AllocationCsvRow(
-                producer=row['producer'],
-                consumer=row['consumer'],
-                period_start=parse_timestamp(row['timestamp']),
-                duration=Duration.HOUR,
-                quantity_kwh=Decimal(row['quantity'])
-            )
-            allocations.append(allocation)
-    return allocations
+        for row in reader:            
+            
+            producer=row['producer'],
+            consumer=row['consumer'],
+            period_start=parse_timestamp(row['timestamp']),
+            duration=Duration.HOUR,
+            quantity_kwh=Decimal(row['quantity'])            
+
+            # TODO: return allocations
+    
