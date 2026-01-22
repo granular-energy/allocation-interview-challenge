@@ -23,7 +23,7 @@ This will read from the CSV files in the `data/` directory and display record co
 ## Project Structure
 
 - `Program.cs` - CLI entry point
-- `Models.cs` - Record types for ConsumptionVolume, ProductionVolume, AllocationCsvRow
+- `Models.cs` - Record types for ConsumptionVolume, ProductionVolume
 - `CsvReading.cs` - Functions to load CSV files into model objects
 - `data/` - CSV data files (consumption.csv, production.csv, allocations.csv)
 - `Tests/` - Unit tests

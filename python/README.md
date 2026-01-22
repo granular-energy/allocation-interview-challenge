@@ -31,7 +31,7 @@ This will read from the CSV files in the `data/` directory and display record co
 ## Project Structure
 
 - `main.py` - CLI entry point
-- `models.py` - Data classes for ConsumptionVolume, ProductionVolume, AllocationCsvRow
+- `models.py` - Data classes for ConsumptionVolume, ProductionVolume
 - `csv_reading.py` - Functions to load CSV files into model objects
 - `data/` - CSV data files (consumption.csv, production.csv, allocations.csv)
 - `tests/` - Unit tests

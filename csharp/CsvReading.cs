@@ -83,4 +83,19 @@ public static class CsvReading
             yield return record;
         }
     }
+
+    public static string FindRepoRoot(string? currentDir = null)
+    {
+        currentDir ??= AppContext.BaseDirectory;
+        if (Directory.GetDirectories(currentDir, ".git").Length > 0)
+        {
+            return currentDir;
+        }
+        var parentDir = Directory.GetParent(currentDir); ;
+        if (parentDir == null)
+        {
+            throw new Exception("Repository root not found");
+        }
+        return FindRepoRoot(parentDir.FullName);
+    }
 }

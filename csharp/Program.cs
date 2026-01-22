@@ -1,6 +1,6 @@
 using AllocationChallenge;
 
-var dataDir = Path.Combine(AppContext.BaseDirectory, "data");
+var dataDir = Path.Combine(CsvReading.FindRepoRoot(), "data");
 
 var consumptionFile = Path.Combine(dataDir, "consumption.csv");
 var productionFile = Path.Combine(dataDir, "production.csv");
@@ -14,9 +14,9 @@ Console.WriteLine($"\nLoading production data from {productionFile}...");
 var productionVolumes = CsvReading.LoadProduction(productionFile);
 Console.WriteLine($"Loaded {productionVolumes.Count} production records");
 
-Console.WriteLine($"\nLoading allocations data from {allocationsFile}...");
-var allocations = CsvReading.LoadAllocations(allocationsFile);
-Console.WriteLine($"Loaded {allocations.Count} allocation records");
+// Console.WriteLine($"\nLoading allocations data from {allocationsFile}...");
+// var allocations = CsvReading.LoadAllocations(allocationsFile);
+// Console.WriteLine($"Loaded {allocations.Count} allocation records");
 
 // Show sample data
 if (consumptionVolumes.Count > 0)

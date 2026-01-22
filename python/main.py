@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 from pathlib import Path
 
-from csv_reading import load_allocations, load_consumption, load_production
+from csv_reading import (
+    get_repo_root,
+    load_allocations,
+    load_consumption,
+    load_production,
+)
 
 
 def main():
-    data_dir = Path(__file__).parent / 'data'
+    data_dir = get_repo_root() / 'data'
 
     consumption_file = data_dir / 'consumption.csv'
     production_file = data_dir / 'production.csv'
