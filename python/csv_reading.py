@@ -46,11 +46,11 @@ def load_allocations(file_path: Path) -> None:
         reader = csv.DictReader(f)
         for row in reader:            
             
-            producer=row['producer'],
-            consumer=row['consumer'],
-            period_start=parse_timestamp(row['timestamp']),
-            duration=Duration.HOUR,
-            quantity_kwh=Decimal(row['quantity'])            
+            producer = row['producer']
+            consumer = row['consumer']
+            period_start = parse_timestamp(row['timestamp'])
+            duration = Duration.HOUR
+            quantity_kwh = Decimal(row['quantity'])
 
             # TODO: return allocations
 
