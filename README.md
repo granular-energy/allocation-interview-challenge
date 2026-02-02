@@ -2,7 +2,7 @@ Welcome to the Granular Energy Engineering Interview foundation code repository!
 
 # Introduction
 
-This repository contains a foundation that you will build while screensharing with us in the technical interview. Under the repository root there are subfolders for different languages. We want you to work in a language you comfortable in. If your preferred language is not there please let us know ASAP and we will endeavour to create it for you.
+This repository contains a foundation that you will build while screensharing with us in the technical interview. Under the repository root there are subfolders for different languages. **We want you to work in a language you are most comfortable in. If your preferred language is not there please let us know ASAP and we will endeavour to create it for you.**
 
 # Business context
 
