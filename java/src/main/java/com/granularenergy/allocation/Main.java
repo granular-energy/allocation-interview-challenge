@@ -1,8 +1,8 @@
-package com.allocation;
+package com.granularenergy.allocation;
 
-import com.allocation.csv.CsvReading;
-import com.allocation.models.ConsumptionVolume;
-import com.allocation.models.ProductionVolume;
+import com.granularenergy.allocation.csv.CsvReading;
+import com.granularenergy.allocation.models.ConsumptionVolume;
+import com.granularenergy.allocation.models.ProductionVolume;
 
 import java.nio.file.Path;
 import java.util.List;

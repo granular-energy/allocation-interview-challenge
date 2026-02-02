@@ -1,8 +1,9 @@
-package com.allocation;
+package com.granularenergy.allocation;
 
-import com.allocation.models.ConsumptionVolume;
-import com.allocation.models.Duration;
 import org.junit.jupiter.api.Test;
+
+import com.granularenergy.allocation.models.ConsumptionVolume;
+import com.granularenergy.allocation.models.Duration;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

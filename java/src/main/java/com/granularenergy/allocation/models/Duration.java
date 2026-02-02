@@ -1,4 +1,4 @@
-package com.allocation.models;
+package com.granularenergy.allocation.models;
 
 public enum Duration {
     HOUR,

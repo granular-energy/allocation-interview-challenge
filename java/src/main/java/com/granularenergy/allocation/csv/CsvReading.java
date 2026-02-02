@@ -1,8 +1,8 @@
-package com.allocation.csv;
+package com.granularenergy.allocation.csv;
 
-import com.allocation.models.ConsumptionVolume;
-import com.allocation.models.Duration;
-import com.allocation.models.ProductionVolume;
+import com.granularenergy.allocation.models.ConsumptionVolume;
+import com.granularenergy.allocation.models.Duration;
+import com.granularenergy.allocation.models.ProductionVolume;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
 

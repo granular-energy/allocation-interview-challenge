@@ -1,4 +1,4 @@
-package com.allocation.models;
+package com.granularenergy.allocation.models;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

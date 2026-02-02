@@ -20,14 +20,7 @@ mvn clean compile
 Run the main class to load consumption, production, and allocation data:
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.allocation.Main"
-```
-
-Or build and run the JAR:
-
-```bash
-mvn package
-java -jar target/allocation-challenge-1.0-SNAPSHOT.jar
+mvn exec:java -Dexec.mainClass="com.granularenergy.allocation.Main"
 ```
 
 This will read from the CSV files in the `data/` directory and display record counts and sample data.
