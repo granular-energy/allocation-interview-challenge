@@ -1,5 +1,6 @@
 __pycache__
 .claude
+.vscode
 
 # C#
 bin/
@@ -7,3 +8,12 @@ obj/
 *.user
 *.suo
 .vs/
+
+# Java
+target/
+*.class
+*.jar
+*.war
+*.ear
+.idea/
+*.iml
