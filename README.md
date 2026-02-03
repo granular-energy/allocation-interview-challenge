@@ -47,4 +47,3 @@ The technical interview will consist of the following
 
 - adding some functionality to the foundation we provide, while screensharing
 - further discussion of various technical topics
-- a deep dive into a project you have worked on. You are free to use diagramming tools if you like
