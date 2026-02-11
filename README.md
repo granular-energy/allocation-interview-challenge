@@ -10,7 +10,7 @@ The core of Granular Energy’s business is allocating electricity production, o
 
 Both the production and consumption of electricity are measured by meters. The information supplied by these meters has a certain granularity or resolution.
 
-The granularity could be anything from 1 year down to 1 hour. So for example yearly production information could be that Solar Farm A generated 3000 MWh (megawatt-hours) in 2024 and 3200 MWh in 2025. But for Wind Farm B we might have hourly production information, so for example it generated 350 kWh (kilowatt-hours) in the first hour of 1st January 2024, 320 kWh in the 2nd hour and so on.
+The granularity could be anything from 1 year down to 1 hour. So for example yearly production information could be that Solar Farm A generated 3000 MWh (megawatt-hours) in 2024 and 3200 MWh in 2025. But for Wind Farm B we might have hourly production information, so for example it generated 350 kWh (kilowatt-hours - 1/1000 of a megawatt-hour) in the first hour of 1st January 2024, 320 kWh in the 2nd hour and so on.
 
 # Preparation for the interview
 
