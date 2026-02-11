@@ -8,21 +8,21 @@ This repository contains a foundation that you will build upon while screenshari
 
 The core of Granular Energy’s business is allocating electricity production, or generation, to electricity consumption. It is not possible to actually control the flow of electricity from one meter to another, so these allocations happen separately to the actual purchase of energy.
 
-Both the production and consumption of electricity are measured by meters. The information supplied by these meters has a certain granularity or resolution - in other words the size of the time periods into which the energy information is divided.
+Both the production and consumption of electricity are measured by meters. The information supplied by these meters has a certain granularity or resolution.
 
-The granularity could be anything from 1 year down to 1 hour. So for example yearly production information could be that Solar Farm A generated 3000 MWh (megawatt-hours) in 2024 and 3200 MWh in 2025. But for Wind Farm B we might have hourly production information, so for example it generated 350 kWh (kilowatt-hours - 1/1000 of a megawatt-hour) in the first hour of 1st January 2024, 320 kWh in the 2nd hour and so on.
+The granularity could be anything from 1 year down to 1 hour. So for example yearly production information could be that Solar Farm A generated 3000 MWh (megawatt-hours) in 2024 and 3200 MWh in 2025. But for Wind Farm B we might have hourly production information, so for example it generated 350 kWh (kilowatt-hours) in the first hour of 1st January 2024, 320 kWh in the 2nd hour and so on.
 
 # Preparation for the interview
 
 This repository contains, in multiple languages, a small amount of code that:
 
-- models "consumption volumes" and "production volumes" - these have
+- models "production volumes" and "consumption volumes" - these have
   - a starting time
   - a duration (i.e. the granularity described above)
-  - a consumer or producer respectively (the entity that consumed or produced some energy in the real world)
+  - a producer or consumer respectively (the entity that produced or consumed the energy)
   - a quantity of energy in kWh
 - has a simple unit test
-- implements a command line app to read from CSV files containing consumption and production information. These files are also included
+- implements a command line app to read from CSV files containing consumption and production information. These files are also included.
 
 As preparation for the interview please:
 
