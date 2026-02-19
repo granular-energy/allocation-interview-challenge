@@ -1,6 +1,7 @@
 __pycache__
 .claude
 .vscode
+venv/
 
 # C#
 bin/

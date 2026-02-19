@@ -2,6 +2,10 @@
 
 A CLI tool for loading and processing energy allocation data from CSV files.
 
+## Prerequisites
+
+- Python 3.10 or higher
+
 ## Setup
 
 Install dependencies:
