@@ -9,7 +9,6 @@ import com.opencsv.exceptions.CsvValidationException;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.math.BigDecimal;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.time.LocalDateTime;
@@ -43,7 +42,7 @@ public class CsvReading {
                     row[headerMap.get("consumer")],
                     parseTimestamp(row[headerMap.get("timestamp")]),
                     Duration.HOUR,
-                    new BigDecimal(row[headerMap.get("quantity")])
+                    Double.parseDouble(row[headerMap.get("quantity")])
                 );
                 consumptionVolumes.add(volume);
             }
@@ -65,7 +64,7 @@ public class CsvReading {
                     row[headerMap.get("producer")],
                     parseTimestamp(row[headerMap.get("timestamp")]),
                     Duration.HOUR,
-                    new BigDecimal(row[headerMap.get("quantity")])
+                    Double.parseDouble(row[headerMap.get("quantity")])
                 );
                 productionVolumes.add(volume);
             }
@@ -85,7 +84,7 @@ public class CsvReading {
                 String consumer = row[headerMap.get("consumer")];
                 LocalDateTime periodStart = parseTimestamp(row[headerMap.get("timestamp")]);
                 Duration duration = Duration.HOUR;
-                BigDecimal quantityKwh = new BigDecimal(row[headerMap.get("quantity")]);
+                double quantityKwh = Double.parseDouble(row[headerMap.get("quantity")]);
 
                 // TODO: return allocations
             }
