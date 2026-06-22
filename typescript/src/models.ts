@@ -1,5 +1,4 @@
 import { Temporal } from '@js-temporal/polyfill';
-import Decimal from 'decimal.js';
 
 export enum Duration {
   HOUR = 'HOUR',
@@ -13,7 +12,7 @@ export class ProductionVolume {
     public readonly producer: string,
     public readonly periodStart: Temporal.ZonedDateTime,
     public readonly duration: Duration,
-    public readonly quantityKwh: Decimal
+    public readonly quantityKwh: number
   ) {}
 }
 
@@ -22,7 +21,7 @@ export class ConsumptionVolume {
     public readonly consumer: string,
     public readonly periodStart: Temporal.ZonedDateTime,
     public readonly duration: Duration,
-    public readonly quantityKwh: Decimal
+    public readonly quantityKwh: number
   ) {}
 }
 

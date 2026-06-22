@@ -1,5 +1,4 @@
 import { Temporal } from '@js-temporal/polyfill';
-import Decimal from 'decimal.js';
 import { ConsumptionVolume, Duration } from '../src/models';
 
 describe('ConsumptionVolume', () => {
@@ -9,12 +8,12 @@ describe('ConsumptionVolume', () => {
       'C1',
       periodStart,
       Duration.HOUR,
-      new Decimal('4671.549')
+      4671.549
     );
 
     expect(volume.consumer).toBe('C1');
     expect(volume.periodStart.equals(periodStart)).toBe(true);
     expect(volume.duration).toBe(Duration.HOUR);
-    expect(volume.quantityKwh.equals(new Decimal('4671.549'))).toBe(true);
+    expect(volume.quantityKwh).toBe(4671.549);
   });
 });

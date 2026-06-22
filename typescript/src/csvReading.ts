@@ -2,7 +2,6 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { Temporal } from '@js-temporal/polyfill';
 import { parse } from 'csv-parse/sync';
-import Decimal from 'decimal.js';
 import {
   ConsumptionVolume,
   ProductionVolume,
@@ -39,7 +38,7 @@ export function loadConsumption(filePath: string): ConsumptionVolume[] {
         row['consumer'],
         parseTimestamp(row['timestamp']),
         Duration.HOUR,
-        new Decimal(row['quantity'])
+        parseFloat(row['quantity'])
       )
   );
 }
@@ -52,7 +51,7 @@ export function loadProduction(filePath: string): ProductionVolume[] {
         row['producer'],
         parseTimestamp(row['timestamp']),
         Duration.HOUR,
-        new Decimal(row['quantity'])
+        parseFloat(row['quantity'])
       )
   );
 }
@@ -64,7 +63,7 @@ export function loadAllocations(filePath: string): void {
     const consumer = row['consumer'];
     const periodStart = parseTimestamp(row['timestamp']);
     const duration = Duration.HOUR;
-    const quantityKwh = new Decimal(row['quantity']);
+    const quantityKwh = parseFloat(row['quantity']);
 
     // TODO: return allocations
   }

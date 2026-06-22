@@ -40,7 +40,7 @@ function main(): void {
   }
   // if (allocations.length > 0) {
   //   const sample = allocations[0];
-  //   console.log(`Sample allocation record: AllocationVolume(producer='${sample.producer}', consumer='${sample.consumer}', period_start=${sample.periodStart.toISOString()}, duration=${sample.duration}, quantity_kwh=${sample.quantityKwh})`);
+  //   console.log(`Sample allocation record: AllocationVolume(producer='${sample.producer}', consumer='${sample.consumer}', period_start=${sample.periodStart.toString()}, duration=${sample.duration}, quantity_kwh=${sample.quantityKwh})`);
   // }
 }
 
